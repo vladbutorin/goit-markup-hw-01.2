@@ -614,6 +614,11 @@ body {
     fill: var(--accent-color);
 }
 
+.social-link:hover,
+.social-icon:focus {
+    color: #ffffff;
+}
+
 .social-icon {
     fill: #303030;
     transition: fill 500ms linear;
