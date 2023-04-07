@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
@@ -21,14 +22,14 @@
     <header class="header">
         <div class="container header-container">
             <nav class="header-nav">
-                <a href="" class="header-logo">
+                <a href="" class="header-logo animate__animated animate__bounce">
                     <svg class="header-icon" width="66" height="55">
                         <use href="./img/sprite.svg#icon-logo"></use>
                     </svg>
                 </a>
                 <ul class="list menu-list">
                     <li class="menu-item">
-                        <a class="menu-link link" href="#about">О нас</a>
+                        <a class="menu-link link current" href="#about">О нас</a>
                     </li>
                     <li class="menu-item">
                         <a class="menu-link link" href="#prices">Услуги и цены</a>
@@ -43,17 +44,19 @@
             </nav>
             <div class="header-connect">
                 <a class="header-tel link" href="tel:++380441111111">+38 044 111 11 11</a>
-                <button class="header-btn btn btn-light" type="button">онлайн-запись</button>
+                <button class="header-btn btn btn-light" data-modal-open type="button">онлайн-запись</button>
             </div>
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="container hero-container">
-                <ul class="hero-list list">
-                    <li class="hero-item"><a class="hero-link link" href="">Instagram</a></li>
-                    <li class="hero-item"><a class="hero-link link" href="">Youtube</a></li>
-                </ul>
+                <div class="hero-left">
+                    <ul class="hero-list list">
+                        <li class="hero-item"><a class="hero-link link" href="">Instagram</a></li>
+                        <li class="hero-item"><a class="hero-link link" href="">Youtube</a></li>
+                    </ul>
+                </div>
                 <div class="hero-right">
                     <p class="pre-title pre-title-light hero-pre-title" lang="en">A hair salon for men in Kyiv</p>
                     <h1 lang="en" class="hero-title">BarberShop</h1>
@@ -173,7 +176,13 @@
                 <h2 class="section-title section-title-dark masters-title">Наши мастера</h2>
                 <ul class="masters-list list">
                     <li class="masters-item">
-                        <img src="./img/masters-img-1.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                        <div class="masters-item-wrap">
+                            <img class="masters-img" src="./img/masters-img-1.jpg" alt="Барбер стрижет клиента" width="370" height="346">
+                            <p class="masters-picture-tex">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Inventore vitae veniam dolore. Impedit ipsum aspernatur, exercitationem sunt ducimus
+                                maiores? Placeat velit quae aliquid mollitia ut alias eum odit provident quisquam?
+                            </p>
+                        </div>
                         <div class="masters-description">
                             <h3 class="masters-item-title" lang="en">John Smith</h3>
                             <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -335,6 +344,16 @@
             <li class="footer-item"><a class="footer-link link" href="">Youtube</a></li>
         </ul>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-btn" data-modal-close>
+                <svg class="modal-close-icon" width="18" height="18">
+                    <use href="./img/sprite.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
